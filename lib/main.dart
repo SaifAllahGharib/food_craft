@@ -4,13 +4,11 @@ import 'package:food_craft/core/utils/functions/init_app.dart';
 import 'package:food_craft/core/utils/functions/set_portrait_orientation.dart';
 import 'package:food_craft/core/utils/routes.dart';
 
-import 'core/utils/functions/init_firebase.dart';
-
 void main() async {
   initApp();
   changeStatusBarColor();
   setPortraitOrientation();
-  await initFirebase();
+  // await initFirebase();
   runApp(const MyApp());
 }
 
