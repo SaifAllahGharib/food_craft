@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:food_craft/core/utils/functions/change_status_bar_color.dart';
+import 'package:food_craft/core/utils/functions/init_app.dart';
+import 'package:food_craft/core/utils/functions/set_portrait_orientation.dart';
 
-void main() {
+import 'core/utils/functions/init_firebase.dart';
+
+void main() async {
+  initApp();
+  changeStatusBarColor();
+  setPortraitOrientation();
+  await initFirebase();
   runApp(const MyApp());
 }
 
