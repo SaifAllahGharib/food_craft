@@ -22,7 +22,7 @@ class CustomAppBarHomeView extends StatelessWidget {
                 children: [
                   Text(
                     "Narsingidi",
-                    style: Styles.textStyle12.copyWith(color: Colors.black54),
+                    style: Styles.textStyle13.copyWith(color: Colors.black54),
                   ),
                   const Icon(Icons.arrow_drop_down_rounded),
                 ],
