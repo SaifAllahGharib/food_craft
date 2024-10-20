@@ -41,6 +41,7 @@ dependencies:
   go_router: ^14.3.0
   device_preview: ^1.2.0
   flutter_screenutil: ^5.9.3
+  smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:
   flutter_test:

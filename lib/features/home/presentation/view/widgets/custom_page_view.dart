@@ -11,14 +11,14 @@ class CustomPageView extends StatefulWidget {
 
 class _CustomPageViewState extends State<CustomPageView> {
   late PageController _pageController;
-  double currentPage = 0;
+  double _currentPage = 2;
 
   @override
   void initState() {
-    _pageController = PageController(viewportFraction: 0.85, initialPage: 3)
+    _pageController = PageController(viewportFraction: 0.85, initialPage: 2)
       ..addListener(
         () {
-          currentPage = _pageController.page!;
+          _currentPage = _pageController.page!;
           setState(() {});
         },
       );
@@ -33,14 +33,16 @@ class _CustomPageViewState extends State<CustomPageView> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // color: Colors.blue,
-      height: getHeight(context) * 0.40,
+    return SizedBox(
+      height: getHeight(context) * 0.36,
       child: PageView.builder(
         controller: _pageController,
-        physics: const BouncingScrollPhysics(),
         itemCount: 5,
-        itemBuilder: (context, index) => const PageViewItem(),
+        itemBuilder: (context, index) => PageViewItem(
+          pageController: _pageController,
+          currentPage: _currentPage,
+          index: index,
+        ),
       ),
     );
   }

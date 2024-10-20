@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/constant.dart';
+import 'package:food_craft/core/utils/functions/height.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_app_bar_home_view.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_page_view.dart';
 
@@ -12,11 +13,11 @@ class HomeViewBody extends StatelessWidget {
       margin: const EdgeInsets.only(top: 10, bottom: 15),
       padding:
           const EdgeInsets.only(left: primaryPadding, right: primaryPadding),
-      child: const Column(
+      child: Column(
         children: [
-          CustomAppBarHomeView(),
-          SizedBox(height: 40),
-          CustomPageView(),
+          const CustomAppBarHomeView(),
+          SizedBox(height: getHeight(context) * 0.05),
+          const CustomPageView(),
         ],
       ),
     );
