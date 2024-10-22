@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_craft/core/utils/app_localizations.dart';
 import 'package:food_craft/core/utils/colors.dart';
-import 'package:food_craft/core/utils/functions/width.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_text.dart';
 
 class RowStarsAndRateAndComments extends StatelessWidget {
@@ -8,7 +9,6 @@ class RowStarsAndRateAndComments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double sizedBox = getWidth(context) * 0.027;
     return Wrap(
       children: [
         Wrap(
@@ -17,16 +17,15 @@ class RowStarsAndRateAndComments extends StatelessWidget {
             (index) => Icon(
               Icons.star,
               color: AppColors.primaryColor,
-              size: getWidth(context) * 0.039,
+              size: Dimensions.iconSize20(context),
             ),
           ),
         ),
-        SizedBox(width: sizedBox),
+        SizedBox(width: Dimensions.width10(context)),
         const CustomText(text: "4.5"),
-        SizedBox(width: sizedBox),
+        SizedBox(width: Dimensions.width10(context)),
         const CustomText(text: "1752"),
-        SizedBox(width: sizedBox),
-        const CustomText(text: "comments"),
+        CustomText(text: " ${"comments".tr(context)}"),
       ],
     );
   }

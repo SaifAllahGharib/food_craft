@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_craft/core/utils/functions/width.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/core/utils/styles.dart';
 
 class CustomIconAndText extends StatelessWidget {
@@ -19,13 +19,13 @@ class CustomIconAndText extends StatelessWidget {
         children: [
           Icon(
             icon,
-            size: getWidth(context) * 0.045,
+            size: Dimensions.iconSize20(context),
             color: color,
           ),
           const SizedBox(width: 5),
           Text(
             text,
-            style: Styles.textStyle13(context),
+            style: Styles.textStyle12(context),
           ),
         ],
       ),

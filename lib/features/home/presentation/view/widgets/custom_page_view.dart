@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_craft/core/utils/functions/height.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/page_view_item.dart';
 
 class CustomPageView extends StatelessWidget {
@@ -17,7 +17,7 @@ class CustomPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: getHeight(context) * 0.36,
+      height: Dimensions.pageView(context),
       child: PageView.builder(
         controller: pageController,
         itemCount: countOfPage,

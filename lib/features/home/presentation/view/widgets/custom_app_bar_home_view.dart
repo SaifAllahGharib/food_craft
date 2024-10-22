@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/colors.dart';
-import 'package:food_craft/core/utils/functions/width.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/core/utils/styles.dart';
 
 class CustomAppBarHomeView extends StatelessWidget {
@@ -8,7 +8,6 @@ class CustomAppBarHomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double sizeContainer = (getWidth(context) * 0.11).floorToDouble();
     return SizedBox(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,7 +23,7 @@ class CustomAppBarHomeView extends StatelessWidget {
                 children: [
                   Text(
                     "Narsingidi",
-                    style: Styles.textStyle13(context)
+                    style: Styles.textStyle12(context)
                         .copyWith(color: Colors.black54),
                   ),
                   const Icon(Icons.arrow_drop_down_rounded),
@@ -33,16 +32,16 @@ class CustomAppBarHomeView extends StatelessWidget {
             ],
           ),
           Container(
-            width: sizeContainer,
-            height: sizeContainer,
+            width: Dimensions.height45(context),
+            height: Dimensions.height45(context),
             decoration: BoxDecoration(
               color: AppColors.primaryColor,
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(Dimensions.radius15(context)),
             ),
             child: Icon(
               Icons.search_rounded,
               color: Colors.white,
-              size: getWidth(context) * 0.064,
+              size: Dimensions.iconSize24(context),
             ),
           ),
         ],

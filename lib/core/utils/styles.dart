@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/colors.dart';
-import 'package:food_craft/core/utils/functions/width.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 
 class Styles {
-  static TextStyle textStyle13(BuildContext context) {
+  static TextStyle textStyle12(BuildContext context) {
     return TextStyle(
-      fontSize: getWidth(context) * 0.0321,
+      fontSize: Dimensions.fontSize12(context),
       fontFamily: "Roboto",
       color: AppColors.textColor,
       height: 1.2,
@@ -14,7 +14,7 @@ class Styles {
 
   static TextStyle textStyle20(BuildContext context) {
     return TextStyle(
-      fontSize: getWidth(context) * 0.05,
+      fontSize: Dimensions.fontSize20(context),
       color: Colors.black,
       fontFamily: "Roboto",
       fontWeight: FontWeight.w400,

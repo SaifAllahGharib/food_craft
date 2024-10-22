@@ -10,7 +10,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Styles.textStyle13(context),
+      style: Styles.textStyle12(context),
     );
   }
 }

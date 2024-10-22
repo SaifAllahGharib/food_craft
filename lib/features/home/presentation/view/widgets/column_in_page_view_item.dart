@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_craft/core/utils/functions/height.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/core/utils/styles.dart';
 import 'package:food_craft/core/widgets/row_location_and_time.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/row_stars_and_rate_and_comments.dart';
@@ -16,9 +16,9 @@ class ColumnInPageView extends StatelessWidget {
           "Chinese Side",
           style: Styles.textStyle20(context),
         ),
-        SizedBox(height: getHeight(context) * 0.010),
+        SizedBox(height: Dimensions.height10(context)),
         const RowStarsAndRateAndComments(),
-        SizedBox(height: getHeight(context) * 0.025),
+        SizedBox(height: Dimensions.height15(context)),
         const RowLocationAndTime(),
       ],
     );
