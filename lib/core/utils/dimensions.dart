@@ -46,6 +46,10 @@ abstract class Dimensions {
     return getHeight(context) / 18.76;
   }
 
+  static double height120(BuildContext context) {
+    return getHeight(context) / 6.9;
+  }
+
   // Dynamic width padding and margin
   static double width10(BuildContext context) {
     return getWidth(context) / 84.4;

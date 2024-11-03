@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/colors.dart';
 import 'package:food_craft/core/utils/dimensions.dart';
-import 'package:food_craft/core/utils/styles.dart';
+import 'package:food_craft/features/home/presentation/view/widgets/custom_text.dart';
 
 class CustomAppBarHomeView extends StatelessWidget {
   const CustomAppBarHomeView({super.key});
@@ -12,21 +12,20 @@ class CustomAppBarHomeView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
+          const Column(
             children: [
-              Text(
-                "Bangladesh",
-                style: Styles.textStyle20(context)
-                    .copyWith(color: AppColors.primaryColor),
+              CustomText(
+                text: "Bangladesh",
+                colorBigText: AppColors.primaryColor,
+                bigText: true,
               ),
               Row(
                 children: [
-                  Text(
-                    "Narsingidi",
-                    style: Styles.textStyle12(context)
-                        .copyWith(color: Colors.black54),
+                  CustomText(
+                    text: "Narsingidi",
+                    colorSmallText: Colors.black54,
                   ),
-                  const Icon(Icons.arrow_drop_down_rounded),
+                  Icon(Icons.arrow_drop_down_rounded),
                 ],
               ),
             ],

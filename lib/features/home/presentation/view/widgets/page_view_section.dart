@@ -48,11 +48,12 @@ class _PageViewSectionState extends State<PageViewSection> {
         SmoothPageIndicator(
           controller: _pageController,
           count: countOfPage,
-          effect: SwapEffect(
+          effect: ExpandingDotsEffect(
             activeDotColor: AppColors.primaryColor,
             spacing: Dimensions.width30(context),
             dotWidth: Dimensions.width20(context),
             dotHeight: Dimensions.width20(context),
+            expansionFactor: 2,
           ),
           onDotClicked: (index) {
             onClickInDot(index);
