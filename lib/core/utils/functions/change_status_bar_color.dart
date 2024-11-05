@@ -1,10 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:food_craft/core/utils/colors.dart';
 
 void changeStatusBarColor() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: AppColors.primaryColor,
+      statusBarColor: CupertinoColors.transparent,
       statusBarIconBrightness: Brightness.light,
     ),
   );

@@ -12,7 +12,10 @@ class PopularListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.only(bottom: Dimensions.height10(context)),
-          child: const PopularListViewItem(),
+          child: GestureDetector(
+            child: const PopularListViewItem(),
+            onTap: () {},
+          ),
         );
       },
     );

@@ -46,10 +46,6 @@ abstract class Dimensions {
     return getHeight(context) / 18.76;
   }
 
-  static double height120(BuildContext context) {
-    return getHeight(context) / 6.9;
-  }
-
   // Dynamic width padding and margin
   static double width10(BuildContext context) {
     return getWidth(context) / 84.4;
@@ -90,11 +86,29 @@ abstract class Dimensions {
   }
 
   // Dynamic icon size
+  static double iconSize16(BuildContext context) {
+    return getHeight(context) / 52.75;
+  }
+
   static double iconSize20(BuildContext context) {
     return getHeight(context) / 42.2;
   }
 
   static double iconSize24(BuildContext context) {
     return getHeight(context) / 35.17;
+  }
+
+  // List view size
+  static double listViewImage(BuildContext context) {
+    return getWidth(context) / 3.25;
+  }
+
+  static double listViewColumn(BuildContext context) {
+    return getWidth(context) / 3.9;
+  }
+
+  // Popular Food details size
+  static double popularFoodImageSize(BuildContext context) {
+    return getHeight(context) / 2.41;
   }
 }

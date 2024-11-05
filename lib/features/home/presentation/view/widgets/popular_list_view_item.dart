@@ -12,8 +12,8 @@ class PopularListViewItem extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: Dimensions.height120(context),
-          height: Dimensions.height120(context),
+          width: Dimensions.listViewImage(context),
+          height: Dimensions.listViewImage(context),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Dimensions.radius20(context)),
             color: Colors.white38,
@@ -25,7 +25,8 @@ class PopularListViewItem extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            padding: EdgeInsets.all(Dimensions.width15(context)),
+            height: Dimensions.listViewColumn(context),
+            padding: EdgeInsets.all(Dimensions.width20(context)),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -35,22 +36,29 @@ class PopularListViewItem extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0xffe8e8e8),
-                  blurRadius: 15,
+                  blurRadius: 5,
                 ),
               ],
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const CustomText(
-                  text: "sdfsdfsdfsd",
-                  bigText: true,
-                ),
-                SizedBox(height: Dimensions.height10(context)),
-                const CustomText(text: "sdfsdfa;sdausdjalsdlasd"),
-                SizedBox(height: Dimensions.height10(context)),
-                const RowLocationAndTime(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CustomText(
+                    text: "Nutritious fruit meal in China",
+                    textOverflow: TextOverflow.ellipsis,
+                    bigText: true,
+                  ),
+                  SizedBox(height: Dimensions.height10(context)),
+                  const CustomText(
+                    text: "With chinese characteristics",
+                    textOverflow: TextOverflow.ellipsis,
+                  ),
+                  SizedBox(height: Dimensions.height10(context)),
+                  const RowLocationAndTime(),
+                ],
+              ),
             ),
           ),
         ),

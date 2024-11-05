@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/dimensions.dart';
-import 'package:food_craft/features/home/presentation/view/widgets/column_in_page_view_item.dart';
+import 'package:food_craft/features/home/presentation/view/widgets/custom_column.dart';
 
 class TextContainerPageView extends StatelessWidget {
   const TextContainerPageView({super.key});
@@ -41,7 +41,7 @@ class TextContainerPageView extends StatelessWidget {
             right: Dimensions.height12(context),
             top: Dimensions.height15(context),
           ),
-          child: const ColumnInPageView(),
+          child: const CustomColumn(text: "Chinese Side"),
         ),
       ),
     );

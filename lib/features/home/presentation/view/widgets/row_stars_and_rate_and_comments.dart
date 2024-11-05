@@ -9,8 +9,8 @@ class RowStarsAndRateAndComments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      crossAxisAlignment: WrapCrossAlignment.center,
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Wrap(
           children: List.generate(

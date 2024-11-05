@@ -8,20 +8,20 @@ class RowLocationAndTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Wrap(
       children: [
         const CustomIconAndText(
           text: "Normal",
           icon: Icons.circle,
           color: AppColors.yellowColor,
         ),
-        SizedBox(width: Dimensions.width10(context)),
+        SizedBox(width: Dimensions.width20(context)),
         const CustomIconAndText(
           text: "1.7 km",
           icon: Icons.location_on_rounded,
           color: AppColors.primaryColor,
         ),
-        SizedBox(width: Dimensions.width10(context)),
+        SizedBox(width: Dimensions.width20(context)),
         const CustomIconAndText(
           text: "32 m",
           icon: Icons.access_time_rounded,

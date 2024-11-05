@@ -17,7 +17,7 @@ class Styles {
       fontSize: Dimensions.fontSize20(context),
       color: Colors.black,
       fontFamily: "Roboto",
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
     );
   }
 }
