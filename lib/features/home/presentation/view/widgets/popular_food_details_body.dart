@@ -11,6 +11,7 @@ class PopularFoodDetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: double.infinity,
+      width: double.infinity,
       child: Stack(
         children: [
           Container(
@@ -49,8 +50,10 @@ class PopularFoodDetailsBody extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius:
-                    BorderRadius.circular(Dimensions.radius20(context)),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(Dimensions.radius20(context)),
+                  topLeft: Radius.circular(Dimensions.radius20(context)),
+                ),
               ),
               child: const Column(
                 children: [

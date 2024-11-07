@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_craft/constant.dart';
 import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_app_bar_home_view.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/page_view_section.dart';
@@ -12,9 +11,14 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 10, bottom: 15),
-      padding:
-          const EdgeInsets.only(left: primaryPadding, right: primaryPadding),
+      margin: EdgeInsets.only(
+        top: Dimensions.height10(context),
+        bottom: Dimensions.height15(context),
+      ),
+      padding: EdgeInsets.only(
+        left: Dimensions.height20(context),
+        right: Dimensions.height20(context),
+      ),
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(

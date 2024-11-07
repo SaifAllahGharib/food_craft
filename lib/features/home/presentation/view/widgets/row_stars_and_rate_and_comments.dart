@@ -10,7 +10,6 @@ class RowStarsAndRateAndComments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Wrap(
           children: List.generate(
@@ -25,7 +24,7 @@ class RowStarsAndRateAndComments extends StatelessWidget {
         SizedBox(width: Dimensions.width10(context)),
         const CustomText(text: "4.5"),
         SizedBox(width: Dimensions.width10(context)),
-        const CustomText(text: "1752"),
+        const CustomText(text: "1.7K"),
         CustomText(text: " ${"comments".tr(context)}"),
       ],
     );
