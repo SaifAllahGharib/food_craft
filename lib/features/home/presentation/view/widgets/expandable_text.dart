@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/colors.dart';
+import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/core/utils/styles.dart';
 
 class ExpandableText extends StatefulWidget {
@@ -58,16 +59,17 @@ class _ExpandableTextState extends State<ExpandableText>
                   children: [
                     Text(
                       isExpanded ? "Show less" : "Show more",
-                      style: const TextStyle(
-                        color: AppColors.primaryColor,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: Dimensions.fontSize16(context)),
                     ),
                     Icon(
                       isExpanded
                           ? Icons.keyboard_arrow_up_rounded
                           : Icons.keyboard_arrow_down_rounded,
                       color: AppColors.primaryColor,
+                      size: Dimensions.iconSize20(context),
                     ),
                   ],
                 ),
