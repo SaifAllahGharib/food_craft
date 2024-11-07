@@ -10,9 +10,9 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
+      height: Dimensions.height130(context),
       padding: EdgeInsets.symmetric(
-        horizontal: Dimensions.width20(context),
+        horizontal: Dimensions.width30(context),
         vertical: Dimensions.height20(context),
       ),
       decoration: BoxDecoration(
@@ -23,7 +23,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
         ),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             padding: EdgeInsets.all(Dimensions.height10(context)),

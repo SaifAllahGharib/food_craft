@@ -4,6 +4,7 @@ import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_column.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_icon_button.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_text.dart';
+import 'package:food_craft/features/home/presentation/view/widgets/expandable_text.dart';
 
 class PopularFoodDetailsBody extends StatelessWidget {
   const PopularFoodDetailsBody({super.key});
@@ -65,6 +66,12 @@ class PopularFoodDetailsBody extends StatelessWidget {
                     text: "Introduce",
                     bigText: true,
                   ),
+                  SizedBox(height: Dimensions.height15(context)),
+                  const ExpandableText(
+                    text:
+                        "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+                  ),
+                  SizedBox(height: Dimensions.height15(context)),
                 ],
               ),
             ),
