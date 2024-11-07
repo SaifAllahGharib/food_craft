@@ -12,6 +12,15 @@ class Styles {
     );
   }
 
+  static TextStyle textStyle16(BuildContext context) {
+    return TextStyle(
+      fontSize: Dimensions.fontSize16(context),
+      fontFamily: "Roboto",
+      color: AppColors.textColor,
+      height: 1.2,
+    );
+  }
+
   static TextStyle textStyle20(BuildContext context) {
     return TextStyle(
       fontSize: Dimensions.fontSize20(context),

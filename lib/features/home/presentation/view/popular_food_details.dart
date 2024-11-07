@@ -3,6 +3,8 @@ import 'package:food_craft/features/home/presentation/view/widgets/custom_bottom
 import 'package:food_craft/features/home/presentation/view/widgets/popular_food_details_body.dart';
 
 class PopularFoodDetails extends StatelessWidget {
+  static const id = "/popular_food_details";
+
   const PopularFoodDetails({super.key});
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/colors.dart';
+import 'package:food_craft/core/utils/styles.dart';
 
 class ExpandableText extends StatefulWidget {
   final String text;
@@ -37,6 +38,8 @@ class _ExpandableTextState extends State<ExpandableText>
                 child: Text(
                   widget.text,
                   softWrap: true,
+                  style: Styles.textStyle16(context)
+                      .copyWith(color: AppColors.paraColor, height: 1.8),
                   maxLines: isExpanded ? widget.text.length : 4,
                   overflow:
                       isExpanded ? TextOverflow.visible : TextOverflow.ellipsis,

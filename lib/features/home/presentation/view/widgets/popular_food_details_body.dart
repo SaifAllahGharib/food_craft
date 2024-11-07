@@ -5,6 +5,7 @@ import 'package:food_craft/features/home/presentation/view/widgets/custom_column
 import 'package:food_craft/features/home/presentation/view/widgets/custom_icon_button.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_text.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/expandable_text.dart';
+import 'package:go_router/go_router.dart';
 
 class PopularFoodDetailsBody extends StatelessWidget {
   const PopularFoodDetailsBody({super.key});
@@ -30,11 +31,19 @@ class PopularFoodDetailsBody extends StatelessWidget {
             top: Dimensions.height45(context),
             left: Dimensions.width20(context),
             right: Dimensions.width20(context),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomIconButton(icon: Icons.arrow_back_ios_new_outlined),
-                CustomIconButton(icon: Icons.shopping_cart_outlined),
+                CustomIconButton(
+                  icon: Icons.arrow_back_ios_new_outlined,
+                  onPressed: () {
+                    GoRouter.of(context).pop();
+                  },
+                ),
+                CustomIconButton(
+                  icon: Icons.shopping_cart_outlined,
+                  onPressed: () {},
+                ),
               ],
             ),
           ),

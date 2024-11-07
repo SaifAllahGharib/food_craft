@@ -33,9 +33,10 @@ class CustomBottomNavigationBar extends StatelessWidget {
             ),
             child: Row(
               children: [
-                const CustomIconButton(
+                CustomIconButton(
                   icon: Icons.remove,
                   bgColor: Colors.white,
+                  onPressed: () {},
                 ),
                 SizedBox(width: Dimensions.width10(context)),
                 const CustomText(
@@ -44,9 +45,10 @@ class CustomBottomNavigationBar extends StatelessWidget {
                   bigText: true,
                 ),
                 SizedBox(width: Dimensions.width10(context)),
-                const CustomIconButton(
+                CustomIconButton(
                   icon: Icons.add,
                   bgColor: Colors.white,
+                  onPressed: () {},
                 ),
               ],
             ),

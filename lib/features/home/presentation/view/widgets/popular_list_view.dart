@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_craft/core/utils/dimensions.dart';
+import 'package:food_craft/features/home/presentation/view/popular_food_details.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/popular_list_view_item.dart';
+import 'package:go_router/go_router.dart';
 
 class PopularListView extends StatelessWidget {
   const PopularListView({super.key});
@@ -14,7 +16,9 @@ class PopularListView extends StatelessWidget {
           padding: EdgeInsets.only(bottom: Dimensions.height10(context)),
           child: GestureDetector(
             child: const PopularListViewItem(),
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(PopularFoodDetails.id);
+            },
           ),
         );
       },

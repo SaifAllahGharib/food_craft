@@ -72,6 +72,10 @@ abstract class Dimensions {
     return getHeight(context) / 65;
   }
 
+  static double fontSize16(BuildContext context) {
+    return getHeight(context) / 52.75;
+  }
+
   static double fontSize20(BuildContext context) {
     return getHeight(context) / 42.2;
   }
