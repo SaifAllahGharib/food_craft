@@ -5,8 +5,15 @@ import 'package:food_craft/core/utils/dimensions.dart';
 
 class CustomIconButton extends StatelessWidget {
   final IconData icon;
+  final Color iconColor;
+  final Color bgColor;
 
-  const CustomIconButton({super.key, required this.icon});
+  const CustomIconButton({
+    super.key,
+    required this.icon,
+    this.iconColor = const Color(0xff756d54),
+    this.bgColor = const Color(0x71fcf4e4),
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +24,15 @@ class CustomIconButton extends StatelessWidget {
         child: Container(
           width: Dimensions.height45(context),
           height: Dimensions.height45(context),
-          decoration: const BoxDecoration(
-            color: Color(0x71fcf4e4),
+          decoration: BoxDecoration(
+            color: bgColor,
             shape: BoxShape.circle,
           ),
           child: IconButton(
             onPressed: () {},
             icon: Icon(
               icon,
-              color: const Color(0xff756d54),
+              color: iconColor,
               size: Dimensions.iconSize16(context),
             ),
           ),

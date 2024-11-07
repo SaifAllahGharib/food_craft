@@ -3,6 +3,7 @@ import 'package:food_craft/core/utils/assets.dart';
 import 'package:food_craft/core/utils/dimensions.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_column.dart';
 import 'package:food_craft/features/home/presentation/view/widgets/custom_icon_button.dart';
+import 'package:food_craft/features/home/presentation/view/widgets/custom_text.dart';
 
 class PopularFoodDetailsBody extends StatelessWidget {
   const PopularFoodDetailsBody({super.key});
@@ -55,9 +56,15 @@ class PopularFoodDetailsBody extends StatelessWidget {
                   topLeft: Radius.circular(Dimensions.radius20(context)),
                 ),
               ),
-              child: const Column(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomColumn(text: "Biriani"),
+                  const CustomColumn(text: "Biriani"),
+                  SizedBox(height: Dimensions.height20(context)),
+                  const CustomText(
+                    text: "Introduce",
+                    bigText: true,
+                  ),
                 ],
               ),
             ),
